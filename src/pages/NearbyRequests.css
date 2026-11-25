@@ -1,0 +1,25 @@
+.nearby-location-bar {
+  display: flex; align-items: center; gap: 0.4rem;
+  background: var(--primary-subtle); border-radius: 8px; padding: 0.5rem 0.75rem;
+  font-size: 0.8rem; color: var(--primary); margin-bottom: 1rem;
+}
+.nearby-location-note { margin: -0.5rem 0 1rem; color: #666; font-size: 0.8rem; }
+.nearby-filters { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.nearby-radius-tabs, .nearby-type-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.radius-tab, .type-tab {
+  padding: 0.35rem 0.75rem; border-radius: 20px; border: 1.5px solid #e0e0e0;
+  background: #fff; font-size: 0.8rem; cursor: pointer; font-weight: 500; color: #555;
+  transition: all 0.2s;
+}
+.radius-tab-active, .type-tab-active {
+  background: var(--primary); color: #fff; border-color: var(--primary);
+}
+.nearby-count { font-size: 0.85rem; color: #555; margin-bottom: 0.75rem; }
+.nearby-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.nearby-empty {
+  text-align: center; padding: 3rem 1rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+}
+.nearby-empty span { font-size: 3.5rem; }
+.nearby-empty h3 { margin: 0; color: #333; }
+.nearby-empty p { color: #666; font-size: 0.875rem; margin: 0; }
