@@ -25,7 +25,7 @@ Do not commit this value. Enter it only in Render environment variables.
 
 1. Push this repository to GitHub.
 2. Open https://dashboard.render.com and select **New > Blueprint**.
-3. Connect `Vamshinaidu884/Agriconnect`.
+3. Connect `Nandamarthala/AgriConnect_Pro`.
 4. Render reads `render.yaml` and the backend `rootDir: backend`.
 5. If creating a Web Service manually, use **Root Directory** `backend`, **Build Command** `npm ci && npm run build`, and **Start Command** `npm start`.
 6. Create each required environment variable below.

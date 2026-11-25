@@ -48,14 +48,13 @@ export default function Landing() {
             <div><div className="landing-proof-stars"><Star size={14} fill="currentColor" /> <b>Built around local knowledge</b></div><span>People, tools, and work in one place</span></div>
           </div>
         </div>
-        <div className="landing-hero-visual" aria-label="Illustration representing connected farm services">
-          <div className="landing-visual-sun" />
-          <div className="landing-visual-cloud landing-cloud-one" />
-          <div className="landing-visual-cloud landing-cloud-two" />
-          <div className="landing-visual-hill hill-back" />
-          <div className="landing-visual-hill hill-front" />
-          <div className="landing-visual-field-lines" />
-          <span className="landing-tractor">🌱</span>
+        <div className="landing-hero-visual">
+          <img
+            className="landing-hero-photo"
+            src="/images/farmer-with-oxen-india.jpg"
+            alt="A farmer standing with oxen in a field in Maharashtra, India"
+            fetchPriority="high"
+          />
           <div className="landing-floating-card"><span className="landing-card-check"><BadgeCheck size={18} /></span><div><b>One connected community</b><small>Work starts with a good match</small></div></div>
           <div className="landing-visual-caption"><MapPin size={15} /> Your local network</div>
         </div>

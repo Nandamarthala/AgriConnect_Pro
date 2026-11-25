@@ -280,7 +280,6 @@ agriconnect/
 ├── public/                 # Frontend static assets
 ├── package.json            # Frontend scripts and dependencies
 ├── vercel.json             # Vercel SPA routing
-├── .env.example            # Frontend environment template
 ├── backend/
 │   ├── server.js           # Backend entry point
 │   ├── config/             # MongoDB and external-service config
@@ -290,7 +289,7 @@ agriconnect/
 │   ├── routes/             # Express routes
 │   ├── services/           # Email, storage, and external APIs
 │   ├── package.json        # Backend scripts and dependencies
-│   └── .env.example        # Backend environment template
+│   └── .env                 # Local backend configuration (ignored by Git)
 ├── render.yaml             # Render backend blueprint
 └── DEPLOYMENT.md           # Production deployment guide
 ```
@@ -299,22 +298,32 @@ agriconnect/
 
 ```powershell
 npm ci
-Copy-Item .env.example .env.local
 npm run dev
 ```
 
 Open http://localhost:5173.
+The frontend defaults to `http://localhost:5000/api`; set `VITE_API_URL` in a
+local `.env.local` only when using a different API address.
 
 ### Backend
 
 ```powershell
 Set-Location backend
 npm ci
-Copy-Item .env.example .env
 npm run dev
 ```
 
+Keep backend settings in the ignored `backend/.env` file. Leave `MONGODB_URI`
+empty to use the persistent local MongoDB for development, or set a complete
+Atlas connection string there. Never commit or share the URI or other secrets.
+
 Open http://localhost:5000/api/health.
+
+### Photo credits
+
+The login tractor photo is by [Rahul Mahalik on Pexels](https://www.pexels.com/photo/tractor-plowing-the-field-18135422/).
+The landing-page farmer and oxen photo is by [EqualStock IN on Pexels](https://www.pexels.com/photo/farmers-in-india-20515274/).
+Both are used under the [Pexels License](https://www.pexels.com/license/).
 
 ---
 

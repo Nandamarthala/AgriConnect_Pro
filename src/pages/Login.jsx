@@ -43,7 +43,7 @@ export default function Login() {
       <main className="login-scene">
         <img
           className="login-hero-image"
-          src="/images/aerial-farmland-login.png"
+          src="/images/tractor-plowing-india.jpg"
           alt=""
           aria-hidden="true"
           fetchPriority="high"
